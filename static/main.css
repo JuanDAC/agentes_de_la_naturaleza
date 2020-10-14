@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Margarine&family=Raleway:ital,wght@0,400;1,300&display=swap');
+
+/* 
+font-family: 'Chicle', cursive;
+
+font-family: 'Margarine', cursive; 
+
+font-family: 'Raleway', sans-serif;
+*/
+
+
+html {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a,
+button {
+	all: unset;
+	cursor: pointer;
+}
+
+p {
+	font-size: var(--font-size-1);
+	font-family: 'Raleway', sans-serif;
+}
+
+:root {
+	--font-size-3: 30px;
+	--font-size-2: 20px;
+	--font-size-1: 14px;
+	
+	--opacity-1: 0.3;
+	--opacity-2: 0.6;
+	--opacity-3: 0.9;
+
+
+
+	--shadow-1: rgba(0, 56, 4, var(--opacity-1));
+	--shadow-2: rgba(0, 56, 4, var(--opacity-1));
+	--shadow-3: rgba(0, 56, 4, var(--opacity-1));
+
+
+	--color-headder: #0e750f;
+	--color-title: #9C445B;
+
+	
+	--color-window-1: #f5feff;
+	--color-window-2: #ffffff;
+	--color-window-3: #183F40;
+	--color-window-4: #dbfafd;
+	--color-window-5: #2B3F40;
+
+	--color-window-blue-1: #82bebf;
+	--color-window-blue-2: #4DC8CA;
+	--color-window-blue-3: #183F40;
+	--color-window-blue-4: #5F8C8C;
+	--color-window-blue-5: #2B3F40;
+	/*  #cf8219; */
+
+	--color-gradient-1:#09914D;
+
+	--color-primary:#1d8f52;
+	--color-secondary:#9fce24;
+	--color-tertiary:#38a46a;
+	--color-fourth: #69c095;
+	/* --color-text:#fdfff8; */
+	--color-text:#f6faf0;
+
+	--color-green-1: #2AA11F;
+	--color-green-2: #81A10E;
+	--color-green-3: #1D8554;
+	--color-green-4: #1D382C;
+
+	--color-brown-1: #8E6263;
+	--color-brown-2: #DB9798;
+	--color-brown-3: #A23F41;
+	--color-brown-4: #5C3F40;
+
+	--color-coral-1: #D48462;
+	--color-coral-2: #D7905A;
+	--color-coral-3: #A1644A;
+	--color-coral-4: #543427;
+
+	--color-house-1: #FFE96B;
+	--color-house-2: #FFF4B8;
+
+	--color-ceil-1: #FF5745;
+	--color-ceil-2: #FF6D5E;
+
+	--border-radius: calc(var(--vh) * 2);
+
+
+}
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	line-height: 1.0;
+}
+
+[data-debugger],
+[data-debugger] * {
+	box-shadow: 0px 0px 0px 1px inset red;
+}
+
+[data-background-one] {
+	height: var(--height_main);
+	width: var(--width_main);
+	--size-lines: 6vmin;
+	background-size: calc(100% + (var(--size-lines) * 2.4)) calc(100% + (var(--size-lines) * 2.4));
+	background-image: 
+		repeating-linear-gradient(-45deg, transparent, transparent var(--size-lines), rgba(255, 255, 255, var(--opacity-1)) var(--size-lines), rgba(255, 255, 255, var(--opacity-1)) calc(var(--size-lines) * 2)),
+		repeating-linear-gradient(45deg, transparent, transparent var(--size-lines), rgba(255, 255, 255, var(--opacity-1)) var(--size-lines), rgba(255, 255, 255, var(--opacity-1)) calc(var(--size-lines) * 2)),
+		linear-gradient(90deg, var(--color-secondary), var(--color-secondary))
+	;
+	animation: backgroundMotion-data-background-one 2s linear 0s infinite;
+}
+.main ,
+.main > * {
+	font-size: calc(var(--vh-main) * 4);
+	font-family: 'Chicle', cursive;
+	letter-spacing: calc(var(--vh-main) * 0.3) ;
+	color: var(--color-text);
+}
+
+
+@keyframes backgroundMotion-data-background-one {
+	from {
+		background-position: calc(var(--size-lines) * -1) calc(var(--size-lines) * -1);
+	}
+	to {
+		background-position: bottom right;
+	}
+}
+
+.background-animate {
+	width: var(--width_main);
+	height: var(--height_main);
+	position: absolute;
+	background-size: calc(var(--length, 7) * var(--width_main)) 100%;
+	image-rendering: optimizespeed;
+	animation: animateBackground 1.5s steps(calc(var(--length, 7) - 1))  infinite;
+}
+@keyframes animateBackground {
+	to {
+		background-position: calc((var(--length, 7) - 1) * var(--width_main)) 0px;
+	}
+}
+/* 
+#sapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+} */
