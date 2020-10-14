@@ -33,8 +33,8 @@
 				{transform: `scale(1) rotate(1800deg)`},
 				{transform: `scale(0) rotate(1980deg)`},
 			], 1500)
-
-			document.getElementById(id)?.remove();
+			const drag = document.getElementById(id)
+			if(drag instanceof HTMLElement) drag.remove();
 			currentLevelData.update((value: ICurrentLevelData) => ({...value, garbage: ((value.garbage as number) - 1)}));
 		}
 	}

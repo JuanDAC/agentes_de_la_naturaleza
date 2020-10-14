@@ -37,8 +37,10 @@
 		if (getType === orderFilter[0]) {
 			const selector: string = orderFilter.shift() as string | "";
 			length = orderFilter.length;
-			document.getElementById(id)?.remove();
-			document.getElementById(selector)?.style.setProperty("filter", selector==="BOTTLE" ? "opacity(1)" : "opacity(0.7)");
+			const drag = document.getElementById(id)
+			if (drag instanceof HTMLElement) drag.remove();
+			const activeSelector = document.getElementById(selector);
+			if (activeSelector instanceof HTMLElement) activeSelector.style.setProperty("filter", selector==="BOTTLE" ? "opacity(1)" : "opacity(0.7)");
 			if (orderFilter.length === 0) {
 				currentLevelData.set({levelCompleted: "river-end-game"} as ICurrentLevelData);
 			}
