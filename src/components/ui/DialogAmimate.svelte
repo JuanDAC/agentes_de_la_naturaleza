@@ -46,7 +46,8 @@
 				currentLevelData.set({});
 				setTimeout(() => {
 					goto("/map").then(()=>{
-						document.getElementById("menuBadges")?.click();
+						const menuBadgesElement = document.getElementById("menuBadges");
+						if (menuBadgesElement && typeof menuBadgesElement.click === "function") menuBadgesElement.click();
 					})
 				}, timeOftimer*0.5);
 			}

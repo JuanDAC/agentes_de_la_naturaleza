@@ -37,8 +37,8 @@
 		if (getType === orderFilter[0]) {
 			const selector: string = orderFilter.shift() as string | "";
 			length = orderFilter.length;
-			const drag = document.getElementById(id)
-			if (drag instanceof HTMLElement) drag.remove();
+			const drag = document.getElementById(id);
+			if (drag && typeof drag.remove === "function") drag.remove();
 			const activeSelector = document.getElementById(selector);
 			if (activeSelector instanceof HTMLElement) activeSelector.style.setProperty("filter", selector==="BOTTLE" ? "opacity(1)" : "opacity(0.7)");
 			if (orderFilter.length === 0) {
