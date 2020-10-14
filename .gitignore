@@ -2,7 +2,8 @@
 .DS_Store
 /.history/
 /node_modules/
-__sapper__/
+__sapper__/build/
+__sapper__/dev/
 /src/node_modules/@sapper/
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,windows,macos,linux
@@ -189,3 +190,23 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,windows,macos,linux
+
+# Created by https://www.toptal.com/developers/gitignore/api/vscode,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=vscode,visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+### vscode ###
+
+# End of https://www.toptal.com/developers/gitignore/api/vscode,visualstudiocode
