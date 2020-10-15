@@ -3,11 +3,11 @@ const ghpages = require("gh-pages");
 ghpages.publish(
 	"__sapper__/export", // <-- replace yourproject with your repo name
 	{
-		branch: "gh-pages",
-		repo: "https://github.com/username/yourproject.git",
+		branch: "master",
+		repo: "https://github.com/JuanDAC/agentes_de_la_naturaleza.git",
 		user: {
-			name: "Your name",
-			email: "Your Email address",
+			name: "JuanDAC",
+			email: "juanavila12.0308@gmail.com",
 		},
 	},
 	() => {

@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from "svelte";
 	let condition: boolean = true;
-	import Cars from "../../components/game_objects/smart/cars.svelte";
+	import Cars from "../../components/game_objects/smart/Cars.svelte";
 	import type { ICurrentLevelData } from "../../interfaces";
 	import { currentLevelData } from "../../store";
 	setInterval(()=>{
