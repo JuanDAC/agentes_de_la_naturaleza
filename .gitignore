@@ -2,8 +2,8 @@
 .DS_Store
 /.history/
 /node_modules/
-__sapper__/build/
-__sapper__/dev/
+__sapper__/
+__sapper__/*
 /src/node_modules/@sapper/
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,windows,macos,linux
