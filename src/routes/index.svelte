@@ -1,23 +1,45 @@
 <script>
 	import Button from '../components/ui/buttons/Button.svelte';
 	import { RepelCursor } from '../actions/helpers';
-	import { badges, characterSelected } from '../store';
+	import { badges, characterSelected, pages, images } from '../store';
 	import { onMount } from 'svelte';
-import { goto } from '@sapper/app';
-	
+	import { goto, prefetchRoutes } from '@sapper/app';
+	let imagesLoad: number = 0;
 	let percentage: number = 0;
 	let successfull: boolean = false;
 	let interval: number = setInterval(() => {
-		percentage += 3;
+		percentage += 1;
 		if (percentage >= 100) {
 			percentage = 100;
 			clearInterval(interval)
 			successfull = true;
 		}
-	}, 100);
+	}, 1200);
+
+	prefetchRoutes(pages).then((result: any) => {
+		console.log(result);
+	}).catch((err: any) => {
+		console.log(err);
+	});
+	
 	// --ignore 
 	let clearStorage: (e: CustomEvent<any>) => void = ()=>{};
 	onMount(()=>{
+		images.forEach((item:string) => setTimeout(()=>{
+			const img: HTMLImageElement = document.createElement("img");
+			img.src = item;
+			img.style.setProperty("background-image", `url(../${item})`);
+			img.style.setProperty("position", "absolute");
+			img.style.setProperty("width", "0px");
+			img.style.setProperty("height", "0px");
+			document.body.appendChild(img);
+			img.onload = () => {
+				console.log(`load -> ${item}`);
+				imagesLoad+=1;
+				const realRercentage: number = Math.ceil(imagesLoad*100/images.length);
+				if (realRercentage > percentage) percentage = realRercentage;
+			}
+		}, Math.random() * 10000));
 		clearStorage = () => {
 			goto("/character-selector", { target: '_blank' }).then((result: any) => {
 				badges.set([]);

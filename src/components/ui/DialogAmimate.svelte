@@ -52,21 +52,12 @@
 				}, timeOftimer*0.5);
 			}
 		});
-		[
-			'img/characters/character-1.png',
-			'img/characters/character-2.png',
-			'img/characters/character-3.png',
-			'img/characters/character-4.png',
-			'img/characters/character-transparent-1.png',
-			'img/characters/character-transparent-2.png',
-			'img/characters/character-transparent-3.png',
-			'img/characters/character-transparent-4.png',
-		].forEach((item:string) =>{
-			document.createElement("img").src = item;
-		})
+
+		
 		// mute music
+
 		mute.set(myAudio.paused);
-		mute.subscribe((value:boolean) => value && !isNaN(index) ? myAudio.pause() : myAudio.play() );
+		mute.subscribe((value:boolean) => value && !isNaN(index) ? myAudio.pause() : myAudio.play());
 		
 		badges.subscribe((value: Array<string>) => {
 			localStorage.removeItem("badges");

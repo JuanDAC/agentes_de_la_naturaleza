@@ -103,7 +103,7 @@
 
 <svelte:head>
 	<title>
-		{path ? path.charAt(0).toUpperCase() + path.slice(1) : "Index"}
+		{path ? path.charAt(0).toUpperCase() + path.slice(1) : "Agentes de la Naturaleza"}
 	</title>
 </svelte:head>
 <header bind:this={header} class="header ">

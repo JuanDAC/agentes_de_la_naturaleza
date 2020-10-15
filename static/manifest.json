@@ -1,9 +1,9 @@
 {
-	"short_name": "Sapper + TypeScript + GraphQL",
-	"name": "Sapper with TypeScript and GraphQL project base",
-	"description": "A template that includes Svelte with Sapper, TypeScript preprocessing, and a GraphQL server through TypeGraphQL",
-	"categories": ["personalization", "productivity"],
-	"lang": "en-US",
+	"short_name": "Agentes de la naturaleza",
+	"name": "Agentes de la naturaleza",
+	"description": "Videojuego Ambiental que propone soluciones a las diferentes problemáticas ambientales en la localidad de San Cristóbal en el Sur Oriente de Bogotá.",
+	"categories": ["game", "videogame", "svelte", "sapper", "javascript", "videogame"],
+	"lang": "es",
 	"dir": "ltr",
 	"icons": [
 		{

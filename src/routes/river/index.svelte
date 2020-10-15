@@ -4,9 +4,8 @@
 	import {currentLevelData} from "../../store/index";
 	import type {ICurrentLevelData} from "../../interfaces";
 	import RecycleOrdinary from '../../components/game_objects/rough/things/RecycleOrdinary.svelte';
-	// let localLeveldata: ICurrentLevelData;
-	// let animationPlay: boolean = false;
-	// let previousAnimationPlay: number = NaN;
+	// import {thinid} from 'thinid';
+
 	const orderFilter:Array<string> = [
 		"BOTTLE",
 		"COTTON",
@@ -148,10 +147,9 @@
 	}
 	.filter-draggable {
 		position: absolute;
-		/* left: calc(var(--vw) * 36); */
-		bottom: calc(var(--vh) * 17);
-		width: calc(var(--vw) * 2);
-		height: calc(var(--vw) * 5);
+		bottom: calc(var(--vh) * 13);
+		width: calc(var(--vw) * 5);
+		height: calc(var(--vw) * 10);
 		transform: translate(0,0) rotate();
 		cursor: grab;
 		cursor: -moz-grab;
@@ -260,7 +258,7 @@
 	<figure 
 		class="filter-draggable"
 		data-type="BOTTLE"
-		style={`left: calc((var(--vw) * ${(Math.random()*40) + 15}));width: calc(var(--vw) * 5);transform: rotate(${Math.random() * 360}deg)`}
+		style={`left: calc((var(--vw) * ${(Math.random()*60) }));width: calc(var(--vw) * 20);transform: rotate(${Math.random() * 360}deg)`}
 		draggable={true}
 		on:dragstart={dragstart}
 		id={`filter_${new Date().valueOf()}`} 
@@ -270,7 +268,7 @@
 	<figure 
 		class="filter-draggable"
 		data-type="COTTON"
-		style={`left: calc((var(--vw) * ${(Math.random()*40) + 15}));transform: rotate(${Math.random() * 360}deg)`}
+		style={`left: calc((var(--vw) * ${(Math.random()*60) }));transform: rotate(${Math.random() * 360}deg)`}
 		draggable={true}
 		on:dragstart={dragstart}
 		id={`filter_${new Date().valueOf()}`} 
@@ -280,7 +278,7 @@
 	<figure 
 		class="filter-draggable"
 		data-type="COAL"
-		style={`left: calc((var(--vw) * ${(Math.random()*40) + 15}));transform: rotate(${Math.random() * 360}deg)`}
+		style={`left: calc((var(--vw) * ${(Math.random()*60) }));transform: rotate(${Math.random() * 360}deg)`}
 		draggable={true}
 		on:dragstart={dragstart}
 		id={`filter_${new Date().valueOf()}`} 
@@ -290,7 +288,7 @@
 	<figure 
 		class="filter-draggable"
 		data-type="SAND"
-		style={`left: calc((var(--vw) * ${(Math.random()*40) + 15}));transform: rotate(${Math.random() * 360}deg)`}
+		style={`left: calc((var(--vw) * ${(Math.random()*60) }));transform: rotate(${Math.random() * 360}deg)`}
 		draggable={true}
 		on:dragstart={dragstart}
 		id={`filter_${new Date().valueOf()}`} 
@@ -300,7 +298,7 @@
 	<figure 
 		class="filter-draggable"
 		data-type="GRAVEL"
-		style={`left: calc((var(--vw) * ${(Math.random()*40) + 15}));transform: rotate(${Math.random() * 360}deg)`}
+		style={`left: calc((var(--vw) * ${(Math.random()*60) }));transform: rotate(${Math.random() * 360}deg)`}
 		draggable={true}
 		on:dragstart={dragstart}
 		id={`filter_${new Date().valueOf()}`} 
@@ -310,7 +308,7 @@
 	<figure 
 		class="filter-draggable"
 		data-type="STONES"
-		style={`left: calc((var(--vw) * ${(Math.random()*40) + 15}));transform: rotate(${Math.random() * 360}deg)`}
+		style={`left: calc((var(--vw) * ${(Math.random()*60) }));transform: rotate(${Math.random() * 360}deg)`}
 		draggable={true}
 		on:dragstart={dragstart}
 		id={`filter_${new Date().valueOf()}`} 

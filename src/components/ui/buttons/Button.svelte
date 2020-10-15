@@ -167,7 +167,7 @@
 				active = false;
 				setTimeout(() => {
 					active = true;
-					domNode.blur()
+					if (domNode) domNode.blur();
 				}, 400)
 			}
 		}

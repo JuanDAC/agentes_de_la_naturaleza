@@ -4,6 +4,54 @@ import type {
 	ICharacter, ClassType, ISliders, ICreditsAndDetails, ICurrentLevelData,
 } from "../interfaces";
 
+export const images: string[] = [
+	"img/characters/character-1.png",
+	"img/characters/character-2.png",
+	"img/characters/character-3.png",
+	"img/characters/character-4.png",
+	"img/characters/character-transparent-1.png",
+	"img/characters/character-transparent-2.png",
+	"img/characters/character-transparent-3.png",
+	"img/characters/character-transparent-4.png",
+	"img/map/map.png",
+	"img/map/park.png",
+	"img/map/river.png",
+	"img/map/school.png",
+	"img/map/street.png",
+	"img/park/park-color.png",
+	"img/park/park.png",
+	"img/filter/filter-1.svg",
+	"img/filter/filter-2.svg",
+	"img/filter/filter-3.svg",
+	"img/filter/filter-4.svg",
+	"img/filter/filter-5.svg",
+	"img/filter/filter-6.svg",
+	"img/river/river-color.png",
+	"img/river/river.png",
+	"img/buttons/btn-continuar.png",
+	"img/buttons/btn-insignias.png",
+	"img/buttons/btn-inicio.png",
+	"img/buttons/opciones.png",
+	"img/badges/responsabilidad_badges.png",
+	"img/badges/badge-filtro-de-agua.png",
+	"img/badges/reciclaje_badges.png",
+	"img/badges/nuevasEnerg_badges.png",
+	"img/school/reciclaje.png",
+	"img/school/school_color.png",
+	"img/school/school.png", // this is
+	"img/street/street_color.png",
+	"img/street/street.png",
+];
+export const pages: string[] = [
+	"/character-selector",
+	"/history",
+	"/map",
+	"/park",
+	"/river",
+	"/school",
+	"/street",
+];
+
 export const mute: Writable<boolean> = writable(false);
 export const menu: Writable<boolean> = writable(false);
 export const menuBadges: Writable<boolean> = writable(false);
