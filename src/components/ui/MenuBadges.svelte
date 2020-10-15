@@ -1,6 +1,6 @@
 <script>
 	import {menuBadges} from "../../store";
-	import Badges from "./badges.svelte";
+	import Badges from "./Badges.svelte";
 	import ButtonClose from "./buttons/ButtonClose.svelte";
 	import WrapperBadges from "./WrapperBadges.svelte";
 	import {levels, badgesURL} from "../../store";
