@@ -171,8 +171,8 @@
 	use:randomize={true}
 	on:dragstart={dragstart}
 	draggable={true}
->	
-	<svg id={`svg_${thinid()}`} bind:this={domNode} version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60.2 55" style="enable-background:new 0 0 60.2 55;" xml:space="preserve">
+>
+	<svg id={`svg_${thinid().split("").map(str => /#/.test(str) ? "" : str).join("")}`} bind:this={domNode} version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60.2 55" style="enable-background:new 0 0 60.2 55;" xml:space="preserve">
 	{#if item === 0}
 		<g id="papel_x5F_4">
 			<path class="st0" d="M13.2,43.3c0.7-7.5,2.2-13.3,5.7-22.4c1.7-4.4,1.9-5.8,0.9-9.3C18.1,5.3,19.4,4.5,32,4.5
