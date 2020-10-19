@@ -178,12 +178,6 @@
 		transform: scale(0);
 		filter: blur(1px);
 	}
-	/* .play {
-		animation-name: animate-scale ;
-		animation-duration: 1.2s;
-		animation-timing-function: linear;
-		animation-fill-mode:forwards;
-	} */
 	.animate::before,
 	.animate::after,
 	.animate span{

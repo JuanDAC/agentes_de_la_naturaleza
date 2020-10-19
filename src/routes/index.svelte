@@ -25,6 +25,8 @@
 	// --ignore 
 	let clearStorage: (e: CustomEvent<any>) => void = ()=>{};
 	onMount(()=>{
+		const loader: HTMLElement = document.getElementById("loader-server") as HTMLElement;
+		if(loader) loader.remove();
 		images.forEach((item:string) => setTimeout(()=>{
 			const img: HTMLImageElement = document.createElement("img");
 			img.src = item;
