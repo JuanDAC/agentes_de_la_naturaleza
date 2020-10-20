@@ -42,7 +42,7 @@
 </script>
 <style >
 	svg {
-		height: calc(var(--vh) * 11);
+		height: calc(var(--vh) * 11.5);
 		cursor:crosshair;
 	}
 	.st0{fill:#E3E5EF;}

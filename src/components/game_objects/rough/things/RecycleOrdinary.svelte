@@ -51,7 +51,7 @@
 </script>
 <style >
 	svg {
-		width: calc(var(--vh) * 5.5);
+		width: calc(var(--vh) * 6.5);
 		transform: rotate(calc(90deg * var(--random)));
 	}
 	.st0{fill:#663931;}
