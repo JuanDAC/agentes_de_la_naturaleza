@@ -49,6 +49,10 @@
 						const menuBadgesElement = document.getElementById("menuBadges");
 						if (menuBadgesElement && typeof menuBadgesElement.click === "function") menuBadgesElement.click();
 					})
+					if (($badges).length === 4) {
+						show = true;
+						currentDialog = dialogs.get("end-game") as string;
+					}
 				}, timeOftimer*0.5);
 			}
 		});

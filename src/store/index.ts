@@ -82,7 +82,7 @@ dialogs.set("street", [
 	"Ayúdanos a concientizar a los conductores con usar otras formas de energía que no producen contaminación del aire y visual.",
 ]);
 dialogs.set("street-end-game", "✔ Muy bien Agente de la naturaleza 💚💚💚💚.");
-dialogs.set("end-game", "✔ Lo conseguiste Agente de la naturaleza 💚💚💚💚💚.");
+dialogs.set("end-game", "💚 Lo conseguiste Agente de la naturaleza 💚💚💚💚.");
 
 export const badgesURL:Map<string, string> = new Map();
 badgesURL.set("park", "img/badges/responsabilidad_badges.png");

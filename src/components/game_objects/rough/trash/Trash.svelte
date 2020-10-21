@@ -9,7 +9,8 @@
 	onMount(()=>{
 		currentLevelData.subscribe((value:ICurrentLevelData) => {
 			if (value.garbage === 0) {
-				currentLevelData.update((value:ICurrentLevelData) => ({...value, levelCompleted: `${location.pathname.replace(/\//, "")}-end-game`}));
+				console.log(`${location.pathname.replace(/\//, "")}-end-game`);
+				currentLevelData.update((value:ICurrentLevelData) => ({...value, levelCompleted: `${location.pathname.replace(/\//, "")}-end-game`, garbage: NaN}));
 			}
 		});
 	})
@@ -42,7 +43,7 @@
 </script>
 <style >
 	svg {
-		height: calc(var(--vh) * 11.5);
+		height: calc(var(--vh) * 12);
 		cursor:crosshair;
 	}
 	.st0{fill:#E3E5EF;}
