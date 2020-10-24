@@ -253,6 +253,13 @@
 		<img src="img/filter/filter-6.svg" alt="filter" on:dragstart|preventDefault={()=>{}}/>
 	</figure>
 
+	<div 
+		class="container"
+		on:dragover={dragover}
+		on:drop={drop}
+	>
+		
+	</div>
 
 
 	<figure 
@@ -315,11 +322,4 @@
 	>
 		<img src="img/filter/filter-6.svg" alt="filter"/>
 	</figure>
-	<div 
-		class="container"
-		on:dragover={dragover}
-		on:drop={drop}
-	>
-		
-	</div>
 </div>
